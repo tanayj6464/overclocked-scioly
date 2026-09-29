@@ -44,7 +44,7 @@ export function Hero() {
 
           <figure className="lg:col-span-6 lg:col-start-7 xl:col-span-5 xl:col-start-8" data-hero-reveal data-hero-plate>
             <div
-              className="crop-marks relative aspect-[5/4] overflow-hidden rounded-sheet border border-rule bg-white [--mark:#9fb0d9]"
+              className="crop-marks relative aspect-[5/4] overflow-hidden rounded-sheet border border-[#cdd6ea] [--mark:#8ea2d2]"
             >
               {photos.hero ? (
                 <Image
@@ -56,7 +56,7 @@ export function Hero() {
                   className="object-cover"
                 />
               ) : (
-                <div className="absolute inset-0 flex items-center justify-center bg-sky/60">
+                <div className="absolute inset-0 flex items-center justify-center">
                   <div data-hero-phoenix className="h-[78%]">
                     <Phoenix className="h-full w-auto" priority />
                   </div>

@@ -1,4 +1,4 @@
-import { site, support } from "@/content/site";
+import { contact, site, support } from "@/content/site";
 import { ButtonLink, Container, PendingButton } from "./ui";
 
 const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
@@ -35,47 +35,32 @@ export function Support() {
 
           <div className="lg:col-span-5 lg:col-start-8">
             <div className="rounded-sheet bg-white p-7 text-ink shadow-[0_24px_60px_-28px_rgba(4,12,40,0.55)] sm:p-9">
-              <p className="text-[14px] font-semibold text-muted">Target support per competitor</p>
+              <p className="text-[14px] font-semibold text-muted">Suggested donation</p>
               <p className="mt-2 font-display text-[clamp(4.5rem,9vw,6.5rem)] font-extrabold leading-[0.9] tracking-[-0.055em] text-deep tabular">
-                {usd(support.targetPerCompetitor)}
+                {usd(support.suggestedDonation)}
               </p>
+              <p className="mt-3 text-[15px] text-muted">Any amount helps the team compete.</p>
 
-              <div className="mt-8 border-t-[1.5px] border-ink pt-6">
-                <h3 className="font-display text-[15px] font-bold uppercase tracking-[0.08em] text-ink">
-                  Employer matching
-                </h3>
-                <dl className="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-x-2 sm:gap-x-3">
-                  <div className="flex flex-col">
-                    <dt className="order-2 mt-1 text-[12px] leading-tight text-muted">Your contribution</dt>
-                    <dd className="order-1 font-display text-[clamp(1.5rem,2.6vw,2rem)] font-bold tracking-[-0.04em] tabular">
-                      {usd(support.targetPerCompetitor)}
-                    </dd>
-                  </div>
-                  <span aria-hidden="true" className="pt-2 font-display text-xl font-bold text-muted">+</span>
-                  <div className="flex flex-col">
-                    <dt className="order-2 mt-1 text-[12px] leading-tight text-muted">Employer match</dt>
-                    <dd className="order-1 font-display text-[clamp(1.5rem,2.6vw,2rem)] font-bold tracking-[-0.04em] text-blue tabular">
-                      {usd(support.matchedTotal - support.targetPerCompetitor)}
-                    </dd>
-                  </div>
-                  <span aria-hidden="true" className="pt-2 font-display text-xl font-bold text-muted">=</span>
-                  <div className="flex flex-col">
-                    <dt className="order-2 mt-1 text-[12px] leading-tight text-muted">Total support</dt>
-                    <dd className="order-1 font-display text-[clamp(1.5rem,2.6vw,2rem)] font-bold tracking-[-0.04em] text-deep tabular">
-                      {usd(support.matchedTotal)}
-                    </dd>
-                  </div>
-                </dl>
-                <p className="mt-6 text-[15px] leading-[1.6] text-muted">
-                  Eligible employer matching programs may increase a {usd(support.targetPerCompetitor)}{" "}
-                  contribution to {usd(support.matchedTotal)} in total support.
-                </p>
-              </div>
+              <dl className="mt-8 border-t-[1.5px] border-ink">
+                <div className="border-b border-rule py-5">
+                  <dt className="font-display text-[17px] font-bold tracking-[-0.015em] text-ink">Donate</dt>
+                  <dd className="mt-1.5 text-[15px] leading-[1.6] text-muted">
+                    Give securely through Overclocked&apos;s official HCB fund.
+                  </dd>
+                </div>
+                <div className="py-5">
+                  <dt className="font-display text-[17px] font-bold tracking-[-0.015em] text-ink">Match your donation</dt>
+                  <dd className="mt-1.5 text-[15px] leading-[1.6] text-muted">
+                    Many employers match charitable donations. An eligible match can double
+                    your gift.
+                  </dd>
+                </div>
+              </dl>
 
-              <div className="mt-8 flex flex-col gap-3">
+              <div className="mt-4 flex flex-col gap-3">
                 {hasDonate ? (
                   <ButtonLink href={support.donateUrl} external className="w-full">
-                    Support Overclocked
+                    Donate to Overclocked
                   </ButtonLink>
                 ) : (
                   <PendingButton variant="primary" className="w-full">
@@ -86,6 +71,15 @@ export function Support() {
                   Employer Matching
                 </ButtonLink>
               </div>
+
+              {contact.email ? (
+                <p className="mt-6 text-[14px] text-muted">
+                  Questions?{" "}
+                  <a href={`mailto:${contact.email}`} className="link-underline font-semibold text-blue">
+                    {contact.email}
+                  </a>
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

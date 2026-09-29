@@ -100,11 +100,9 @@ export const eventCategories: { name: string; description: string; note?: string
 ];
 
 export const support = {
-  targetPerCompetitor: 230,
-  matchedTotal: 460,
+  suggestedDonation: 250,
   fiscalSponsor: "The Hack Foundation",
-  /** TODO: paste the official HCB donation URL, e.g. https://hcb.hackclub.com/donations/start/... */
-  donateUrl: "",
+  donateUrl: "https://hcb.hackclub.com/donations/start/base-overclocked-science-olympiad-team",
   /** Search terms donors use in employer matching portals. */
   matchingSearchNames: ["The Hack Foundation", "Overclocked Science Olympiad"],
   uses: [
@@ -134,9 +132,9 @@ export const photos = {
   teamAlt: "" as string,
 };
 
-/** TODO: fill in real values. Empty values are hidden everywhere. */
+/** Empty values are hidden everywhere. */
 export const contact = {
-  email: "",
+  email: "team@overclockedscioly.org",
 };
 
 export const social: { label: string; href: string }[] = [

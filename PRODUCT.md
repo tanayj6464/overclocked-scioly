@@ -22,7 +22,7 @@ The public site for Overclocked, a student-led Division C Science Olympiad team 
 
 ## Positioning
 
-A competitive team with a verified state result: 6th overall at Oregon State 2026, with medals in Bungee Drop, Helicopter, Boomilever, and Robot Tour. The team competes across all 23 Division C events. The support ask is concrete: $230 per competitor, potentially doubled by employer matching through fiscal sponsor The Hack Foundation.
+A competitive team with a verified state result: 6th overall at Oregon State 2026, with medals in Bungee Drop, Helicopter, Boomilever, and Robot Tour. The team competes across all 23 Division C events. The support ask is simple: a suggested $250 donation (any amount welcome), which an eligible employer match can double, through fiscal sponsor The Hack Foundation.
 
 ## Operating Context
 
@@ -33,7 +33,7 @@ Support flows through Overclocked's official HCB (Hack Club Bank) fund. The Hack
 - Single homepage for now: About, Results, Events, Team, Support, Employer matching, Supporters.
 - All results, stats, navigation, sponsors, members, donation links, and socials live in one central config file.
 - Must accept later: hero team photo, competition photos, member photos, sponsor logos, without redesign.
-- Undecided / not yet provided: HCB donation URL, contact email, social links, the team logo file (user will upload), member names, sponsors.
+- Undecided / not yet provided: social links, the team logo file (user will upload), member names, sponsors.
 
 ## Brand Commitments
 
@@ -47,7 +47,9 @@ Support flows through Overclocked's official HCB (Hack Club Bank) fund. The Hack
 
 - 2026 Oregon State: 6th overall. 2nd Bungee Drop, 2nd Helicopter, 3rd Boomilever, 3rd Robot Tour (4 state medals).
 - 23 events, 15 competitors, Division C, Beaverton, Oregon.
-- Support target $230 per competitor; matching may bring a $230 contribution to $460 total.
+- Suggested donation $250; employer matching may double an eligible gift. Never describe per-member costs or what a student pays to join.
+- Donation link: https://hcb.hackclub.com/donations/start/base-overclocked-science-olympiad-team
+- Team email: team@overclockedscioly.org
 - Absences that must not be fabricated: student names, sponsors, emails, social links, donation URLs, school approvals, any awards beyond the list above, photography.
 
 ## Product Principles
