@@ -1,5 +1,5 @@
 /**
- * Overclocked Science Olympiad: single source of truth for site content.
+ * BASE Overclocked: single source of truth for site content.
  *
  * Update facts here, not in components. Anything marked TODO is intentionally
  * empty: the site hides or disables the related UI until a real value exists,
@@ -7,16 +7,23 @@
  */
 
 export const site = {
+  /** Short brand name used in the wordmark and design. */
   name: "Overclocked",
-  legalName: "Overclocked Science Olympiad",
+  /** Official team name; use whenever formally identifying the team. */
+  legalName: "BASE Overclocked",
+  school: "Beaverton Academy of Science & Engineering",
+  schoolShort: "BASE",
   domain: "overclockedscioly.org",
   url: "https://overclockedscioly.org",
   division: "Division C",
   location: "Beaverton, Oregon",
   established: 2025,
   season: "2026–27",
+  title: "BASE Overclocked | Science Olympiad",
   description:
-    "Overclocked is a student-led Division C Science Olympiad team from Beaverton, Oregon. 6th overall at the 2026 Oregon State Tournament.",
+    "BASE Overclocked is the Science Olympiad team at Beaverton Academy of Science & Engineering (BASE) in Beaverton, Oregon.",
+  /** Other names people search for; used in structured data, not hidden copy. */
+  alternateNames: ["Overclocked", "Overclocked Science Olympiad", "BASE Science Olympiad", "BASE Science Olympiad team"],
 };
 
 /** Section anchors used by the header, the divider-tab index, and the footer. */
@@ -35,6 +42,7 @@ export const dividerTabs = [
   { id: "team", label: "Team" },
   { id: "support", label: "Support" },
   { id: "matching", label: "Matching" },
+  { id: "contact", label: "Contact" },
 ] as const;
 
 export const snapshot = [
@@ -104,7 +112,7 @@ export const support = {
   fiscalSponsor: "The Hack Foundation",
   donateUrl: "https://hcb.hackclub.com/donations/start/base-overclocked-science-olympiad-team",
   /** Search terms donors use in employer matching portals. */
-  matchingSearchNames: ["The Hack Foundation", "Overclocked Science Olympiad"],
+  matchingSearchNames: ["The Hack Foundation", "BASE Overclocked"],
   uses: [
     "Tournament registration",
     "Engineering materials",

@@ -17,28 +17,30 @@ const inter = localFont({
   display: "swap",
 });
 
-const title = `${site.legalName} | ${site.division} · ${site.location}`;
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: title,
+    default: site.title,
     template: `%s | ${site.legalName}`,
   },
   description: site.description,
   applicationName: site.legalName,
+  authors: [{ name: site.legalName, url: site.url }],
+  creator: site.legalName,
+  publisher: site.legalName,
+  category: "education",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: site.url,
     siteName: site.legalName,
-    title,
+    title: site.title,
     description: site.description,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title,
+    title: site.title,
     description: site.description,
   },
   robots: { index: true, follow: true },

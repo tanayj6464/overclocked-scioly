@@ -5,7 +5,7 @@ export function Matching() {
   const [primaryName, secondaryName] = support.matchingSearchNames;
   const steps = [
     <>
-      Make your contribution through Overclocked&apos;s official{" "}
+      Make your contribution through BASE Overclocked&apos;s official{" "}
       {support.donateUrl ? (
         <a href={support.donateUrl} target="_blank" rel="noopener noreferrer" className="link-underline font-semibold text-blue">
           HCB fund
@@ -21,7 +21,7 @@ export function Matching() {
       <strong className="font-semibold text-ink">{secondaryName}</strong>, depending on your
       employer&apos;s system.
     </>,
-    <>Submit the matching request and designate Overclocked when possible.</>,
+    <>Submit the matching request and designate BASE Overclocked when possible.</>,
   ];
 
   return (
@@ -55,7 +55,7 @@ export function Matching() {
               </svg>
               <div>
                 <p className="text-[16px] font-medium leading-[1.6] text-ink">
-                  Overclocked Science Olympiad is fiscally sponsored by {support.fiscalSponsor}, a
+                  BASE Overclocked is fiscally sponsored by {support.fiscalSponsor}, a
                   registered 501(c)(3) nonprofit.
                 </p>
                 <p className="mt-2 text-[14px] leading-[1.6] text-muted">

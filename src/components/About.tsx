@@ -18,9 +18,10 @@ export function About() {
           </SectionHeading>
           <div className="space-y-5 text-[18px] leading-[1.65] text-muted lg:col-span-6 lg:col-start-7 lg:pt-2">
             <p className="text-ink">
-              Overclocked is a Division C Science Olympiad team based in Beaverton, Oregon. Our
-              students prepare year-round for events spanning engineering, biology, chemistry,
-              physics, earth and space science, and technology.
+              BASE Overclocked is the Division C Science Olympiad team at Beaverton Academy of
+              Science &amp; Engineering (BASE) in Beaverton, Oregon. Our students prepare year-round
+              for events spanning engineering, biology, chemistry, physics, earth and space science,
+              and technology.
             </p>
             <p>
               We compete through written tests, laboratory events, engineering builds, research,

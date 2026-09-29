@@ -37,7 +37,7 @@ Support flows through Overclocked's official HCB (Hack Club Bank) fund. The Hack
 
 ## Brand Commitments
 
-- Name: Overclocked (formally Overclocked Science Olympiad). An existing logo exists and will be uploaded.
+- Official name: BASE Overclocked, the Science Olympiad team at Beaverton Academy of Science & Engineering (BASE), Beaverton, Oregon. "Overclocked" is the short brand name for the wordmark and design; use "BASE Overclocked" when formally identifying the team. The current phoenix logo is unofficial.
 - Reference for polish and competitive identity: Hypernova Robotics (match level, do not copy).
 - Must read as a professional, competitive, intelligent, youthful-not-childish STEM competition team. Must not read as a SaaS startup, AI-generated landing page, nonprofit template, generic school club, cyberpunk, or dark/neon.
 - User-supplied palette: background #F7F8FA, text #111827, secondary #5E6675, team blue #3157D5, deep blue #17337C, gold #D3AE36 (sparingly), light blue #EEF3FF, white. Blue is the main brand color. Bright, not dark.

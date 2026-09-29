@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { navigation, site } from "@/content/site";
 import { ArrowIcon, Container, Phoenix } from "./ui";
@@ -53,41 +54,41 @@ export function SiteHeader() {
         Skip to content
       </a>
       <Container className="flex h-[4.5rem] items-center justify-between gap-6">
-        <a href="#top" className="flex items-center gap-3" aria-label={`${site.legalName}, back to top`}>
+        <Link href="/" className="flex items-center gap-3" aria-label={`${site.legalName}, home`}>
           <Phoenix className="h-9 w-auto" priority />
           <span className="flex flex-col leading-none">
             <span className="font-display text-[17px] font-extrabold tracking-[0.02em] text-ink">
               OVERCLOCKED
             </span>
             <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
-              Science Olympiad
+              {site.schoolShort} Science Olympiad
             </span>
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden min-[900px]:block">
           <ul className="flex items-center gap-8">
             {navigation.map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
+                <Link
+                  href={`/#${item.id}`}
                   className="text-[15px] font-medium text-ink/80 transition-colors hover:text-blue"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#support"
+          <Link
+            href="/#support"
             className="group hidden h-10 items-center gap-2 rounded-sheet bg-blue px-4 text-[14px] font-semibold text-white transition-colors hover:bg-deep min-[900px]:inline-flex"
           >
             Support the Team
             <ArrowIcon className="transition-transform duration-200 group-hover:translate-x-0.5" />
-          </a>
+          </Link>
           <button
             ref={menuButton}
             type="button"
@@ -115,26 +116,26 @@ export function SiteHeader() {
             <ul>
               {navigation.map((item) => (
                 <li key={item.id} className="border-b border-rule last:border-b-0">
-                  <a
-                    href={`#${item.id}`}
+                  <Link
+                    href={`/#${item.id}`}
                     onClick={() => setOpen(false)}
                     className="flex items-center justify-between py-4 font-display text-xl font-semibold tracking-[-0.02em] text-ink"
                   >
                     {item.label}
                     <ArrowIcon className="text-muted" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <a
-            href="#support"
+          <Link
+            href="/#support"
             onClick={() => setOpen(false)}
             className="mb-3 mt-2 flex h-12 items-center justify-center gap-2 rounded-sheet bg-blue text-[15px] font-semibold text-white"
           >
             Support the Team
             <ArrowIcon />
-          </a>
+          </Link>
         </Container>
       </div>
     </header>

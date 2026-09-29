@@ -96,14 +96,14 @@ export function Phoenix({
   className = "",
   priority = false,
 }: {
-  tone?: "color" | "white";
+  tone?: "color" | "white" | "duo";
   className?: string;
   priority?: boolean;
 }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={tone === "white" ? "/brand/phoenix-white.svg" : "/brand/phoenix-color.svg"}
+      src={tone === "white" ? "/brand/phoenix-white.svg" : tone === "duo" ? "/brand/phoenix-duo.svg" : "/brand/phoenix-color.svg"}
       alt=""
       aria-hidden="true"
       width={985}

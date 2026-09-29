@@ -45,7 +45,7 @@ export function Support() {
                 <div className="border-b border-rule py-5">
                   <dt className="font-display text-[17px] font-bold tracking-[-0.015em] text-ink">Donate</dt>
                   <dd className="mt-1.5 text-[15px] leading-[1.6] text-muted">
-                    Give securely through Overclocked&apos;s official HCB fund.
+                    Give securely through BASE Overclocked&apos;s official HCB fund.
                   </dd>
                 </div>
                 <div className="py-5">
@@ -60,7 +60,7 @@ export function Support() {
               <div className="mt-4 flex flex-col gap-3">
                 {hasDonate ? (
                   <ButtonLink href={support.donateUrl} external className="w-full">
-                    Donate to Overclocked
+                    Donate to BASE Overclocked
                   </ButtonLink>
                 ) : (
                   <PendingButton variant="primary" className="w-full">

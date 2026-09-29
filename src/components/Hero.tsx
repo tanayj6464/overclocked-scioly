@@ -7,7 +7,10 @@ export function Hero() {
     <section id="top" aria-labelledby="hero-title" className="paper-grid relative border-b border-rule">
       <Container className="pt-8 sm:pt-12 lg:pt-14">
         <h1 id="hero-title" className="relative">
-          <span className="sr-only">Overclocked Science Olympiad</span>
+          <span className="sr-only">{site.legalName}: {site.schoolShort} Science Olympiad</span>
+          <span aria-hidden="true" className="mb-2 block font-display text-[clamp(1rem,1.9vw,1.5rem)] font-bold leading-none tracking-[0.22em] text-blue sm:mb-3">
+            {site.schoolShort}
+          </span>
           <span
             aria-hidden="true"
             data-hero-reveal
@@ -31,8 +34,9 @@ export function Hero() {
               Competing across science, engineering, and technology.
             </p>
             <p className="mt-5 max-w-[52ch] text-[17px] leading-[1.6] text-muted">
-              Overclocked is a student-led Science Olympiad team competing across 23 events in
-              engineering, life science, physical science, earth science, and technology.
+              BASE Overclocked is a student-led Science Olympiad team from {site.school},
+              competing across 23 events in engineering, life science, physical science, earth
+              science, and technology.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="#results">View Results</ButtonLink>
@@ -64,7 +68,7 @@ export function Hero() {
               )}
             </div>
             <figcaption className="mt-3 flex items-center justify-between text-[13px] font-medium text-muted">
-              <span>Overclocked · Est. {site.established}</span>
+              <span>{site.legalName} · Est. {site.established}</span>
               <span>{site.season} season</span>
             </figcaption>
           </figure>

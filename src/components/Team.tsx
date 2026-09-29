@@ -44,7 +44,7 @@ export function Team() {
                     className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:40px_40px]"
                   />
                   <Phoenix
-                    tone="white"
+                    tone="duo"
                     className="absolute -right-[24%] top-1/2 h-[128%] w-auto -translate-y-[46%] opacity-40 sm:-right-[6%] sm:opacity-95"
                   />
                   <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">

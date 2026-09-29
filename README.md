@@ -1,6 +1,6 @@
 # overclockedscioly.org
 
-Site for Overclocked Science Olympiad (Division C, Beaverton, Oregon). Next.js 16, TypeScript, Tailwind CSS 4, GSAP. Deployed on Vercel from `main`.
+Site for BASE Overclocked, the Division C Science Olympiad team at Beaverton Academy of Science & Engineering (BASE) in Beaverton, Oregon. Next.js 16, TypeScript, Tailwind CSS 4, GSAP. Deployed on Vercel from `main`.
 
 ## Updating content
 
@@ -13,6 +13,8 @@ Almost everything lives in `src/content/site.ts`:
 - `members`: add `{ name, role, events, photo }` only with each member's permission; photos in `public/team/`.
 - `photos.hero` / `photos.team`: set to a file in `public/photos/` to replace the drawn phoenix panels with real photos.
 - `contact.email`, `social`: empty values stay hidden.
+- `site.legalName` ("BASE Overclocked") is the formal name; `site.name` ("Overclocked") is the short brand.
+- `/privacy` lives in `src/app/privacy/page.tsx`; update its date if you change it.
 
 ## Develop
 
