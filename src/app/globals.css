@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f8fa;
+  --color-ink: #111827;
+  --color-muted: #5e6675;
+  --color-blue: #3157d5;
+  --color-deep: #17337c;
+  --color-gold: #d3ae36;
+  --color-sky: #eef3ff;
+  --color-rule: #d6dce8;
+  --color-grid: #ebeff7;
+  --color-on-deep: #c9d4f5;
+
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sheet: 6px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    background: var(--color-paper);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-blue);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .on-deep :focus-visible {
+    outline-color: var(--color-gold);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  * {
+    scrollbar-color: #b8c2d6 transparent;
+    caret-color: var(--color-blue);
+  }
+}
+
+@layer components {
+  /* Engineering paper: 24px minor grid, 120px major grid. */
+  .paper-grid {
+    background-color: var(--color-paper);
+    background-image:
+      linear-gradient(to right, #e0e6f2 1px, transparent 1px),
+      linear-gradient(to bottom, #e0e6f2 1px, transparent 1px),
+      linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+    background-size:
+      120px 120px,
+      120px 120px,
+      24px 24px,
+      24px 24px;
+    background-position: -1px -1px;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  /* Drafting crop marks at the four corners of a plate. */
+  .crop-marks {
+    position: relative;
+  }
+  .crop-marks::before,
+  .crop-marks::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--mark), var(--mark)) top left / 14px 1px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) top left / 1px 14px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) top right / 14px 1px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) top right / 1px 14px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) bottom left / 14px 1px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) bottom left / 1px 14px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) bottom right / 14px 1px no-repeat,
+      linear-gradient(var(--mark), var(--mark)) bottom right / 1px 14px no-repeat;
+  }
+  .crop-marks::after {
+    display: none;
+  }
+
+  .link-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    transition: text-decoration-color 160ms ease;
+  }
+  .link-underline:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+/* Motion gate: set by an inline script before paint when motion is allowed.
+   A failsafe in the same script removes it if GSAP never takes over. */
+.motion-ok [data-hero-reveal] {
+  visibility: hidden;
+}
