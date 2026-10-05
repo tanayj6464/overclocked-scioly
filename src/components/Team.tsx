@@ -28,7 +28,7 @@ export function Team() {
           </div>
 
           <figure className="lg:col-span-7">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-sheet bg-blue">
+            <div className="relative flex aspect-[4/3] flex-col overflow-hidden rounded-sheet bg-blue sm:aspect-[16/10]">
               {photos.team ? (
                 <Image
                   src={photos.team}
@@ -43,15 +43,17 @@ export function Team() {
                     aria-hidden="true"
                     className="absolute inset-0 opacity-[0.14] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:40px_40px]"
                   />
-                  <Phoenix
-                    tone="duo"
-                    className="absolute -right-[24%] top-1/2 h-[128%] w-auto -translate-y-[46%] opacity-40 sm:-right-[6%] sm:opacity-95"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                    <p className="font-display text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-tight tracking-[-0.03em] text-white">
+                  <div className="relative min-h-0 flex-1">
+                    <Phoenix
+                      tone="duo"
+                      className="absolute inset-0 m-auto h-[86%] w-auto"
+                    />
+                  </div>
+                  <div className="relative border-t border-white/25 px-5 py-3.5 sm:px-8 sm:py-4">
+                    <p className="font-display text-[clamp(1.125rem,2.2vw,1.5rem)] font-bold leading-tight tracking-[-0.03em] text-white">
                       {site.season} roster
                     </p>
-                    <p className="mt-1 text-[15px] text-[#e8eefd]">
+                    <p className="mt-0.5 text-[13px] text-[#e8eefd] sm:text-[15px]">
                       {competitors} competitors · {site.division} · {site.location}
                     </p>
                   </div>
